@@ -1,5 +1,4 @@
-@value colors: "styles/colors";
-@value rose, roseHover from colors;
+@value rose, roseHover from "styles/colors";
 
 .container {
   outline: none;
@@ -10,7 +9,6 @@
 
   padding: 1em;
   min-width: 5em;
-  max-width: 10em;
   color: white;
 
   font-size: 0.75em;

@@ -2,7 +2,10 @@ const path = require("path")
 const fs = require("fs-extra")
 const Sequelize = require("sequelize")
 
-const models = ["./user"]
+const models = [
+  "./message",
+  "./user"
+]
 
 module.exports = function() {
   const app = this
@@ -25,11 +28,11 @@ module.exports = function() {
   //
   app.set("sequelize", sequelize)
 
-  // Now we want to bootstrap each of our models.
+  // Now we want to bootstrap each of our models.  This has a side-effect
+  // (seen in the { model }/index.js functions) of hooking the model into
+  // the app's instance of sequelize.
   //
-  models.forEach(model => {
-    app.configure(require(model))
-  })
+  models.forEach(model => app.configure(require(model)))
 
   app.set("models", sequelize.models)
 

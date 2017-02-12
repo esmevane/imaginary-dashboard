@@ -1,5 +1,6 @@
 import {
   CLEAR_ERRORS,
+  MESSAGE_FAILURE,
   LOGOUT_FAILURE,
   LOGIN_FAILURE,
   SIGNUP_FAILURE,
@@ -29,6 +30,7 @@ export const errors = (initialState = {}, action) => {
   switch (action.type) {
     case LOGOUT_FAILURE:
     case LOGIN_FAILURE:
+    case MESSAGE_FAILURE:
     case SIGNUP_FAILURE:
       return getErrorMessage(action)
     case CLEAR_ERRORS:

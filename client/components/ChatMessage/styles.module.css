@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.timestamp {
+  color: rgba(0, 255, 255, 0.3);
+  width: 25%;
+  vertical-align: middle;
+  font-size: 0.75em;
+
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.body {
+  width: 70%;
+  vertical-align: middle;
+}

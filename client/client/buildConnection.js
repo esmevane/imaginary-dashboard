@@ -17,4 +17,6 @@ const buildConnection = (host = DefaultHost) => {
   return app
 }
 
+window.buildConnection = buildConnection
+
 export default buildConnection

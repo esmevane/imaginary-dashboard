@@ -1,0 +1,35 @@
+@value rose, roseHover from "styles/colors";
+
+.container {
+  width: 50%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.contents {
+  width: 100%;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  background: rose;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  padding: 0.2em 1em;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  transition: 0.3s all ease-in;
+}
+
+.controls:hover {
+  background: roseHover;
+}

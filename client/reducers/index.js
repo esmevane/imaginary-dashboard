@@ -2,6 +2,7 @@ import { combineReducers } from "redux"
 
 import { errors } from "./errors"
 import { token } from "./token"
+import { messages } from "./messages"
 
 const createReducers = () => {
   const context = require.context("components", true, /reducers\.(ts|js)/)
@@ -12,7 +13,7 @@ const createReducers = () => {
     }
   )
 
-  const reducers = context.keys().reduce(toReducer, { token, errors })
+  const reducers = context.keys().reduce(toReducer, { errors, messages, token })
 
   return combineReducers(reducers)
 }

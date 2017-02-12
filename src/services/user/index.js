@@ -12,10 +12,8 @@ module.exports = function() {
     }
   }
 
-  // Initialize our service with any options it requires
   app.use("/users", service(options))
 
-  // Get our initialize service to that we can bind hooks
   const users = app.service("/users")
 
   users.before(hooks.before)

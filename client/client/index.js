@@ -7,7 +7,9 @@ export default class Client {
   }
 
   connect() {
-    return this.connection.authenticate()
+    return this
+      .connection
+      .authenticate()
   }
 
   disconnect() {
@@ -20,6 +22,10 @@ export default class Client {
 
   login({ email, password }) {
     return this.connection.authenticate({ type: "local", email, password })
+  }
+
+  service(key) {
+    return this.connection.service(key)
   }
 
   token() {

@@ -1,0 +1,38 @@
+@value roseHover from "styles/colors";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contents {
+  max-height: 240px;
+  padding: 1em;
+  width: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: rgba(0, 0, 0, 0.875);
+}
+
+.controls {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.controls form {
+  display: inline;
+}
+
+.controls button {
+  width: 20%;
+  min-width: 20%;
+}
+
+.controls input {
+  width: 80%;
+}

@@ -1,4 +1,5 @@
 const services = [
+  "./message",
   "./user"
 ]
 
