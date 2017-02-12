@@ -1,0 +1,25 @@
+@value colors: "styles/colors";
+@value tealFaded, tealHover from colors;
+
+.container {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+
+  padding: 1em 1.5em;
+  min-width: 10em;
+
+  font-size: 0.75em;
+  font-weight: lighter;
+  color: tealHover;
+
+  transition: 0.3s ease-in-out;
+}
+
+.container::placeholder {
+  color: tealFaded;
+}
+
+.container:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}

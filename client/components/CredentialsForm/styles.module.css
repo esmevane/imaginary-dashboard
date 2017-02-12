@@ -1,0 +1,13 @@
+@value radius: 24px;
+
+.container {}
+
+.container input:first-of-type {
+  border-top-left-radius: radius;
+  border-bottom-left-radius: radius;
+}
+
+.container button:last-of-type {
+  border-top-right-radius: radius;
+  border-bottom-right-radius: radius;
+}
