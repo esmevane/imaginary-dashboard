@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { createMessage, fetchMessages } from "actions"
 import ChatDialog from "components/ChatDialog"
 
-class Login extends Component {
+class Messages extends Component {
   componentDidMount() {
     this.props.fetchMessages()
   }
@@ -46,4 +46,4 @@ class Login extends Component {
 const mapStateToProps = ({ messages }) => ({ messages })
 const mapDispatchToProps = { createMessage, fetchMessages }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(Messages)

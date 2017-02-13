@@ -1,13 +1,16 @@
 /* eslint no-constant-condition: "off" */
 
 import Client from "client"
-import { call, fork } from "redux-saga/effects"
+import { call, fork, take } from "redux-saga/effects"
+import { LOGIN_SUCCESS } from "actions"
 
 import create from "./create"
 import find from "./find"
 import listener from "./listener"
 
 function* messages() {
+  yield take(LOGIN_SUCCESS)
+
   const client = new Client()
 
   yield call([ client, client.connect ])
