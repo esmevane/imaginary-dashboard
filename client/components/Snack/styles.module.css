@@ -25,6 +25,7 @@
 
   display: flex;
   flex-wrap: wrap;
+  border-top-left-radius: 24px;
   justify-content: flex-end;
 
   transition: 0.3s all ease-in;
